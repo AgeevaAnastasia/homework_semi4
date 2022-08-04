@@ -28,13 +28,12 @@ int SumOfDigits (int num1, int count1)
 {
     int summ = 0;
     int a = num1;
-    int b = num1;
     for (int i = 1; i <= count; i++)
     {
         a = a % 10;
         summ = summ + a;
-        a = b / 10;
-        b = a;
+        a = num1 / 10;
+        num1 = a;
     }
     return summ;
 }
